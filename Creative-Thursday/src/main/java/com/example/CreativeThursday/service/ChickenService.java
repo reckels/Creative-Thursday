@@ -5,14 +5,20 @@ import com.example.CreativeThursday.repository.ChickenRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 
 @Service
 public class ChickenService {
 
     @Autowired
-    private static ChickenRepository chickenRepository;
+    private ChickenRepository chickenRepository;
 
-    public static Chicken addChicken(Chicken chicken) {
+    public Chicken addChicken(Chicken chicken) {
         return chickenRepository.save(chicken);
     }
+
+    public List<Chicken> findChickens() {return chickenRepository.findAll();}
+
+    public Chicken findChicken(String name) {return chickenRepository.findByNameContaining(name);}
 }
