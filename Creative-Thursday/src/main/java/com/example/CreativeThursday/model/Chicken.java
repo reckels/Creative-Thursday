@@ -26,6 +26,12 @@ public class Chicken {
         this.imageUrl = imageUrl;
     }
 
+    public Chicken(String name, String breed, String imageUrl) {
+        this.name = name;
+        this.breed = breed;
+        this.imageUrl = imageUrl;
+    }
+
     public String getName() {
         return name;
     }

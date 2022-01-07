@@ -21,4 +21,8 @@ public class ChickenService {
     public List<Chicken> findChickens() {return chickenRepository.findAll();}
 
     public Chicken findChicken(String name) {return chickenRepository.findByNameContaining(name);}
+
+    public Chicken findChickenById(int id) {return chickenRepository.findById(id);}
+
+    public Chicken deleteChicken(int id) {return chickenRepository.deleteById(id);}
 }

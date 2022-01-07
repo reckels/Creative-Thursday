@@ -10,4 +10,6 @@ import java.util.List;
 public interface ChickenRepository extends JpaRepository<Chicken, Integer> {
     List<Chicken> findAll();
     Chicken findByNameContaining(String name);
+    Chicken findById(int id);
+    Chicken deleteById(int id);
 }
